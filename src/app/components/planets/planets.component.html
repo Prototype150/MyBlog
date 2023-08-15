@@ -1,8 +1,6 @@
 <h1>
     Planets available for exterminatus:
 </h1>
-<div *ngFor="let planet of planets">
-    <div>  
-       <h2 (click)="onPlanetClick(planet)">Name: {{planet.Name}}; Population: {{planet.Population}}</h2>
-   </div>
-</div>
+<div *ngFor="let planet of planets"> 
+    <app-planet></app-planet>
+</div> 

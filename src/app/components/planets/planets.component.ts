@@ -8,10 +8,13 @@ import { PlanetsService } from 'src/app/services/planets/planets.service';
   styleUrls: ['./planets.component.css']
 })
 export class PlanetsComponent {
-onPlanetClick(planet: PlanetModel) {
-  console.log("Planet " + planet.Name + " was clicked");
-}
   planets;
+  TestString:String = "Test";
+
+  onPlanetClick(planet: PlanetModel) {
+    console.log("Planet " + planet.Name + " was clicked");
+  }
+
   constructor(private planetsService: PlanetsService){
     this.planets = planetsService.getAllPlanets();
   }
