@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PlanetModel } from 'src/app/models/planet/planet.model';
 import { PlanetsService } from 'src/app/services/planets/planets.service';
+import { PlanetComponent } from '../planet/planet.component';
 
 @Component({
   selector: 'planets',
@@ -8,7 +9,7 @@ import { PlanetsService } from 'src/app/services/planets/planets.service';
   styleUrls: ['./planets.component.css']
 })
 export class PlanetsComponent {
-  planets;
+  planets : PlanetComponent[] = [];
   TestString:String = "Test";
 
   onPlanetClick(planet: PlanetModel) {
@@ -16,6 +17,7 @@ export class PlanetsComponent {
   }
 
   constructor(private planetsService: PlanetsService){
-    this.planets = planetsService.getAllPlanets();
+    let planetMOdels = planetsService.getAllPlanets();
+    planetMOdels.forEach(x => this.planets.push(new PlanetComponent(x)));
   }
 }

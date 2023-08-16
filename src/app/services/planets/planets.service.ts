@@ -5,7 +5,7 @@ import { PlanetModel } from 'src/app/models/planet/planet.model';
   providedIn: 'root'
 })
 export class PlanetsService {
-  getAllPlanets(){
+  getAllPlanets() : PlanetModel[]{
     return [new PlanetModel("Terra",10), new PlanetModel("Moon", 1), new PlanetModel("Mars", 23)];
   }
 }
