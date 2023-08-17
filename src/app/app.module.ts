@@ -9,7 +9,6 @@ import { PlanetsService } from './services/planets/planets.service';
 import { WeaponsService } from './services/weapons/weapons.service';
 import { PlanetModel } from './models/planet/planet.model';
 import { WeaponModel } from './models/weapon/weapon.model';
-import { PlanetComponent } from './components/planet/planet.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +16,7 @@ import { PlanetComponent } from './components/planet/planet.component';
     PlanetsComponent,
     WeaponsComponent,
     PlanetModel,
-    WeaponModel,
-    PlanetComponent
+    WeaponModel
   ],
   imports: [
     BrowserModule,
